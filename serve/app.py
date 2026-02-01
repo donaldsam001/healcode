@@ -155,7 +155,7 @@ async def credential (
             "username": body.name, # type: ignore
             "password": "string"
         }
-        base_api(apis["gitplugin"]["create"]["credentials"], body=data)
+        base_api(apis["gitplugin"]["credentials"]["create"], body=data)
         return {"status": "success", "user_id": user_uuid}
     except Exception as e:
         return {"error": "API bên thứ ba lỗi", "details": str(e)}
